@@ -5,4 +5,4 @@
 **Framework & Library :**
 
 1. Go Chi (Router) : https://github.com/go-chi/chi/v5
-2. Go Postgres Driver : https://go get github.com/lib/pq
+2. Go Postgres Driver : https://github.com/lib/pq
