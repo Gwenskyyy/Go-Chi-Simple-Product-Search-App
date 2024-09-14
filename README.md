@@ -1,8 +1,17 @@
-# Go-Chi-Simple-Product-Search-App
+package main
 
-**Tech :** Golang and PostgreSQL (Database)
+import (
+	"ProductSearchAppSql/config"
+	"ProductSearchAppSql/routes"
+	"fmt"
+	"net/http"
+)
 
-**Framework & Library :**
+func main() {
+	config.ConnectDB()
+	// config.AutoMigrate()
 
-1. Go Chi (Router) : https://github.com/go-chi/chi/v5
-2. Go Postgres Driver : https://github.com/lib/pq
+	r := routes.Router()
+	fmt.Println("Server started at localhost:3000")
+	http.ListenAndServe(":3000", r)
+} 
